@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VulnScan-Lite | Passive Web Security Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ VulnScan-Lite</h1>
+            <p class="subtitle">Passive Web Vulnerability & Security Posture Scanner</p>
+        </header>
+
+        <section class="scan-box">
+            <input type="text" id="urlInput" placeholder="Enter website URL (e.g., https://example.com)" required>
+            <button id="scanBtn" onclick="startScan()">Scan Target</button>
+        </section>
+
+        <div id="statusBox" class="status-box hidden">
+            <div class="spinner"></div>
+            <span id="statusText">Initializing passive scan...</span>
+        </div>
+
+        <div id="errorBox" class="error-box hidden"></div>
+
+        <main id="resultsSection" class="results-section hidden">
+            <div class="summary-card">
+                <div class="score-circle" id="gradeBadge">A+</div>
+                <div class="summary-details">
+                    <h2 id="targetTitle">https://example.com</h2>
+                    <p>Security Score: <strong id="scoreValue">95</strong> / 100</p>
+                    <p>Detected Tech: <span id="cmsValue">None Detected</span></p>
+                    <p>TLS / SSL: <span id="sslValue">Valid</span></p>
+                    <button id="downloadBtn" onclick="downloadReport()" style="margin-top: 12px; padding: 8px 16px; background: #10b981; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">
+     Download JSON Report
+</button>
+
+                </div>
+            </div>
+
+            <div class="checks-grid">
+                <div class="check-column">
+                    <h3 class="fail-heading">❌ Failed Checks & Remediation (<span id="failCount">0</span>)</h3>
+                    <div id="failedList" class="check-list"></div>
+                </div>
+
+                <div class="check-column">
+                    <h3 class="pass-heading">✅ Passed Security Checks (<span id="passCount">0</span>)</h3>
+                    <div id="passedList" class="check-list"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
