@@ -48,7 +48,7 @@ VulnScan-Lite/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/tjs-03/VulnScan-Lite
    cd VulnScan-Lite
    ```
 
