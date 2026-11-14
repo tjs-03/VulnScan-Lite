@@ -78,9 +78,6 @@ VulnScan-Lite/
 4. Review your **Security Grade**, **Passed Checks**, and **Failed Checks with Remediation Fixes**.
 5. Click **⬇️ Download JSON Report** to save a local copy of the scan results.
 
-## LIVE PROJECT LINK HERE CHEAK BY AN SINGLE CLICK
-" https://vulnscan-lite-5k4o.onrender.com "
-
 ---
 
 ## 🔌 REST API Endpoints
