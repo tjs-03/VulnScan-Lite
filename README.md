@@ -72,7 +72,7 @@ VulnScan-Lite/
 
 ## 🖥️ How to Use
 
-1. Enter any public target URL (e.g., `https://example.com`) into the input bar on the dashboard.
+1. Enter any public target URL (e.g., `https://youtube.com`) into the input bar on the dashboard.
 2. Click **Scan Target**.
 3. Wait a few seconds while the background worker audits headers, TLS configuration, and technology signatures.
 4. Review your **Security Grade**, **Passed Checks**, and **Failed Checks with Remediation Fixes**.
@@ -85,7 +85,7 @@ VulnScan-Lite/
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
 | `GET` | `/` | Serves the VulnScan-Lite web dashboard |
-| `POST` | `/api/scan` | Queues a new passive scan (`{"url": "https://example.com"}`) |
+| `POST` | `/api/scan` | Queues a new passive scan (`{"url": "https://youtube.com"}`) |
 | `GET` | `/api/status/<job_id>` | Polls the current status (`queued`, `running`, `completed`) and results of a scan |
 
 ---
